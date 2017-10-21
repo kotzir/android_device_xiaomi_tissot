@@ -267,6 +267,16 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier
 
+# Enable update engine sideloading by including the static version of the
+# boot_control HAL and its dependencies.
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.msm8953 \
+    librecovery_updater_msm8953 \
+    libsparse_static
+
+PRODUCT_PACKAGES += \
+    update_engine_sideload
+
 # A/B updater updatable partitions list. Keep in sync with the partition list
 # with "_a" and "_b" variants in the device. Note that the vendor can add more
 # more partitions to this list for the bootloader and radio.

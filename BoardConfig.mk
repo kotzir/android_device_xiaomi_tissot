@@ -150,6 +150,10 @@ TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(LOCAL_PATH)/android_filesystem_config.h
 # TARGET_INIT_VENDOR_LIB := libinit_tissot
 # TARGET_RECOVERY_DEVICE_MODULES := libinit_tissot
 
+# Recovery
+TARGET_RECOVERY_UI_LIB := librecovery_ui_nanohub
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_$(TARGET_BOARD_PLATFORM)
+
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 
